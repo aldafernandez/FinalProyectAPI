@@ -1,4 +1,6 @@
-import { Welcome } from './components/Welcome.jsx';
+import { Welcome } from './components/Welcome/Welcome.jsx';
+import './library.css';
+
 
 export function App() {
   

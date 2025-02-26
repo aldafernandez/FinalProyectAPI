@@ -1,0 +1,16 @@
+.welcome{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+.box-welcome{
+    color: var(--color-1);
+    gap: 1rem;
+    border: 1px solid #fff;
+    padding: 5rem;
+    border-radius: 8px;
+    box-shadow: inset 0 0 10px #1a1919;
+}
