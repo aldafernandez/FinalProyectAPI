@@ -1,0 +1,23 @@
+:root{
+    --bg-dark: #4444;
+    --bg-light: #9e9b9b;
+
+    --color-1: #fff;
+    --color-2: rgb(34, 33, 33);
+
+}
+.bg-dark{ background-color: var(--bg-dark); }
+.bg-light{ background-color: var(--bg-light); }
+
+.flex{ display: flex; }
+.center-center{ justify-content: center; align-items: center; }
+.column{ flex-direction: column; }
+
+.grid-2{ 
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+
+
+

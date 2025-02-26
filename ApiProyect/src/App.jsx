@@ -1,11 +1,10 @@
-
+import { Welcome } from './components/Welcome.jsx';
 
 export function App() {
   
-
   return (
     <>
-      <p>hola mundo</p>
+      < Welcome />
     </>
   )
 }
