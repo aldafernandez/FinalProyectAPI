@@ -6,7 +6,7 @@ import { App } from './App.jsx'
 
 createRoot(document.getElementById('root')).render(
 
-  <div className='flex center-center column '>
+  <div >
     <App />
   </div>,
 )

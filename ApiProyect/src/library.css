@@ -6,6 +6,8 @@
     --color-2: rgb(34, 33, 33);
 
 }
+
+
 .bg-dark{ background-color: var(--bg-dark); }
 .bg-light{ background-color: var(--bg-light); }
 
