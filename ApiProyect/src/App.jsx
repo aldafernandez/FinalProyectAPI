@@ -1,13 +1,12 @@
-import { Welcome } from './components/Welcome/Welcome.jsx';
-import './library.css';
-
+import { Header } from "./Components/Header/Header"
 
 export function App() {
   
   return (
-    <>
-      < Welcome />
+    <> 
+      <Header /> 
     </>
-  )
+    
+  );
 }
 
