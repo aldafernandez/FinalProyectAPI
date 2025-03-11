@@ -1,14 +1,11 @@
-.header{
+.searcher{
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1rem 3rem;
     background-color: #a7a1a1;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    z-index: 100;
-    position: fixed;
     width: 100%;
-    top: 0;
 }
 .font-honk{
     font-family: "Honk";
@@ -20,25 +17,20 @@
       "SHLN" 50;
     font-size: 3.5rem;
 }
-.search-section { 
+.search-sector { 
     display: flex;
-    align-items: center;
     gap: .5rem;
 }
-.search-bar { position: relative; }
-.search-bar .icon{
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    right: 1rem;
-    color: #a7a1a1;
-}
- .input{
-    padding: .5rem 1rem;
-    border-radius: 5px;
-    border: 1px solid #a7a1a1;
+.input{
+    border:none;
+    border-radius: 8px;
+    color: #222222;
+    padding: .5rem;
+    width: 200px;
     
-    &:focus { outline: 1px solid #a7a1a1;}
+    &:focus{
+        outline: none;
+    }
 }
 .button{
     border: 1px solid #444;
