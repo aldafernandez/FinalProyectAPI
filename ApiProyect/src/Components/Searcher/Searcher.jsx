@@ -29,4 +29,4 @@ export function Searcher( {sendMovie}) {
     );
 }
 
-32:32
+//clase 26 min32
