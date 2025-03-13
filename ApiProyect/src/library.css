@@ -11,15 +11,26 @@
 .bg-dark{ background-color: var(--bg-dark); }
 .bg-light{ background-color: var(--bg-light); }
 
+.width-fit { width: fit-content;}
+
 .flex{ display: flex; }
 .center-center{ justify-content: center; align-items: center; }
 .column{ flex-direction: column; }
 
 .grid-2{ 
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 300px);
+    gap: 1rem;
+   
 }
 
-
-
+.btn{
+    border: 1px solid #444;
+    border-radius: 8px;
+    padding: .25rem;
+    cursor: pointer;
+    transition: all .2s ease-in;
+    
+    &:hover{ background-color: #e2678c;}
+}
 

@@ -5,9 +5,12 @@ import { CardMovie } from "./Components/CardMovie/CardMovie";
 export function App() {
   
   let [movie, setMovie] = useState("");
-
+  
   let sendMovie = (value) => { setMovie(value);}
 
+ 
+
+  
 
   return (
     <> 
