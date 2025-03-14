@@ -1,46 +1,45 @@
 import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import './CardMovie.css';
 
 export function CardMovie({movie}) {
 
-    const [data, setData] = useState ( {} );
+    const [data, setData] = useState([]); 
 
     const API_KEY = "488037bb";
 
-    const API_URL = "http://www.omdbapi.com/?&t=" + movie + "&apikey=" + API_KEY;
+    const API_URL = `https://www.omdbapi.com/?apikey=${API_KEY}&s=${movie}`;
 
-    const API_POSTER = "http://img.omdbapi.com/?apikey=488037bb";
+    const API_POSTER = "https://img.omdbapi.com/?apikey=488037bb";
 
     let CallAPI = async () => {
         let response = await fetch(API_URL);
         let info = await response.json();
-
-        setData(info);
+        
+        if (info.Search) {
+            setData(info.Search);
+        }
     }
 
-    useEffect( () => { CallAPI() }, [ movie ]);
-    return (
-        <>
-           { movie != "" && 
-                Object.keys(movie).length > 0 &&
-                    <div className='container'>
-                        <a className='btn width-fit'>Volver</a>
-                        <div className='grid-2'>
-                            <div>
-                                <img className='img-movie' src={ API_POSTER + "&" + data.Poster }/>
-                            </div>
-                            <div className='desc'>
-                                <h2>{data.Title}</h2>
-                                <p>{data.Plot}</p>
-                                <p>Año: {data.Year}.</p>
-                                <p>Genero: {data.Genre}.</p>   
-                            </div>
-                        </div>   
-                    </div>
-           }
+    useEffect(() => {  if (movie) { CallAPI(); } }, [movie]);
 
-            
+    return (
+        < >
+            { movie && data.length > 0 && 
+                <div className='grid-4'>
+                    {data.map((pelicula) => (
+                        <div key={pelicula.imdbID} className='card flex center-center column gap-1'>
+                            <div>
+                                <img className='img-movie' src={API_POSTER + "&i=" + pelicula.imdbID} alt='404 Imagen no disponible' />
+                            </div>
+                            <div className='flex column center-center gap-1'>
+                                <h3>{pelicula.Title}</h3>
+                                <Link to={'/movie/'+ pelicula.imdbID } className='btn w-80'>+ Info</Link>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            }
         </>
     );
 }
-

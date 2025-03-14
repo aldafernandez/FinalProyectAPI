@@ -5,24 +5,48 @@
     --color-1: #fff;
     --color-2: rgb(34, 33, 33);
 
+    --gap-1: .5rem;
+    --gap-2: 1rem;
+    --gap-3: 2rem;
+    --gap-4: 4rem;
+    --gap-5: 5rem;
+
 }
 
+.gap-1 { gap: var(--gap-1); }
+.gap-2 { gap: var(--gap-2); }
+.gap-3 { gap: var(--gap-3); }
+.gap-4 { gap: var(--gap-4); }
+.gap-5 { gap: var(--gap-5); }
 
-.bg-dark{ background-color: var(--bg-dark); }
-.bg-light{ background-color: var(--bg-light); }
+.pad-1 { gap: var(--gap-1); }
+.pad-2 { gap: var(--gap-2); }
+.pad-3 { gap: var(--gap-3); }
+.pad-4 { gap: var(--gap-4); }
+.pad-5 { gap: var(--gap-5); }
+
+/*----------------------------------------------*/
+
+.bg-gray{ background-color: var(--bg-dark); }
+.bg-white{ background-color: var(--bg-light); }
+/*----------------------------------------------*/
 
 .width-fit { width: fit-content;}
+.w-80px { width: 80px; }
+/*----------------------------------------------*/
 
 .flex{ display: flex; }
 .center-center{ justify-content: center; align-items: center; }
 .column{ flex-direction: column; }
+/*----------------------------------------------*/
 
-.grid-2{ 
+.grid-4{ 
     display: grid;
-    grid-template-columns: repeat(2, 300px);
+    grid-template-columns: repeat(4, 1fr);
     gap: 1rem;
-   
+    padding: 2.5rem;
 }
+/*----------------------------------------------*/
 
 .btn{
     border: 1px solid #444;
@@ -30,7 +54,10 @@
     padding: .25rem;
     cursor: pointer;
     transition: all .2s ease-in;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     
     &:hover{ background-color: #e2678c;}
 }
-
+/*----------------------------------------------*/
