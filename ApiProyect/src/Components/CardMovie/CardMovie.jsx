@@ -1,9 +1,11 @@
 import { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import './CardMovie.css';
 
 export function CardMovie({movie}) {
 
+    let  imdbID  = useParams("imdbID");
+    
     const [data, setData] = useState([]); 
 
     const API_KEY = "488037bb";
@@ -34,7 +36,7 @@ export function CardMovie({movie}) {
                             </div>
                             <div className='flex column center-center gap-1'>
                                 <h3>{pelicula.Title}</h3>
-                                <Link to={'/movie/'+ pelicula.imdbID } className='btn w-80'>+ Info</Link>
+                                <Link to={'/movie/' + imdbID } className='btn w-80'>+ Info</Link>
                             </div>
                         </div>
                     ))}

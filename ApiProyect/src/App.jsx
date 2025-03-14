@@ -19,7 +19,7 @@ export function App() {
       
       <Routes>
         <Route path='/' element={ <CardMovie movie={movie}/> } />
-        <Route path='/movie/:imdbID' element={ <Movie/> } />
+        <Route path='/movie/:i' element={ <Movie/> } />
       </Routes>
     
     </>
