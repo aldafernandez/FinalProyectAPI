@@ -1,29 +1,25 @@
-import { useState } from 'react';
-import './Searcher.css';
+import { useState } from "react";
 
+export function Searcher({ setMovie }) {
+  const [search, setSearch] = useState("");
 
-export function Searcher( {sendMovie}) {
-    
-    const [movie, setMovie] = useState("");
+  const handleSearch = (e) => {
+    e.preventDefault();
+    setMovie(search);
+  };
 
-    let checkMovie = () => { if (movie != "") { sendMovie(movie); } }
-
-
-    return(
-        <div className='searcher flex'>
-            <h1 className='font-honk'>Moblix</h1>
-            <div className='search-sector'>
-                <input
-                    type='text'
-                    className='input'
-                    placeholder='Ingrese el título de la película'
-                    onChange={ (e) => setMovie(e.target.value)}
-                />
-                <a onClick={ () => checkMovie() } className='btn'>Buscar</a>
-    
-            </div>
-           
-        </div>
-    );
+  return (
+    <form onSubmit={handleSearch}>
+      <input
+        type="text"
+        placeholder="Buscar película..."
+        value={search}
+        onChange={(e) => setSearch(e.target.value)}
+      />
+      <button type="submit">Buscar</button>
+    </form>
+  );
 }
+
+
 

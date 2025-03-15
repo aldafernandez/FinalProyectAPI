@@ -8,6 +8,18 @@
 
 body{ width: 100%; }
 
+body {
+  background-color: white;
+  color: black;
+  transition: all 0.3s ease-in-out;
+}
+
+body.dark-mode {
+  background-color: black;
+  color: white;
+}
+
+
 @media (max-width:1100px){
   .grid-4{ 
     display: grid;
