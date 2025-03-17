@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { FaMoon, FaSun } from "react-icons/fa6";
+import './Searcher.css';
 
 export function Searcher({ setMovie }) {
   const [search, setSearch] = useState("");
@@ -25,18 +26,23 @@ export function Searcher({ setMovie }) {
 
 
   return (
-    <form onSubmit={handleSearch}>
-      <input
-        type="text"
-        placeholder="Buscar película..."
-        value={search}
-        onChange={(e) => setSearch(e.target.value)}
-      />
-      <button type="submit">Buscar</button>
-      <button onClick={toggleTheme}>
-        {darkMode ? <FaSun/> : <FaMoon/> }
-      </button>
-    </form>
+    <header className="searcher">
+      <h2 className="font-honk f-size-4">Moblix</h2>
+      <form className="search-sector" onSubmit={handleSearch}>
+        <input
+          type="text"
+          placeholder="Buscar película..."
+          className="input"
+          value={search}
+          onChange={(e) => setSearch(e.target.value)}
+        />
+        <button type="submit">Buscar</button>
+        <button className="btn-mode" onClick={toggleTheme}>
+          {darkMode ? <FaSun/> : <FaMoon/> }
+        </button>
+      </form>
+    </header>
+    
   );
 }
 

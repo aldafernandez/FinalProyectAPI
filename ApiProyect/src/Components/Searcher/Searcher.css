@@ -1,4 +1,5 @@
 .searcher{
+    display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1rem 3rem;
@@ -13,7 +14,6 @@
     font-variation-settings:
       "MORF" 15,
       "SHLN" 50;
-    font-size: 3.5rem;
 }
 .search-sector { 
     display: flex;

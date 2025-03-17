@@ -19,11 +19,19 @@
 .gap-4 { gap: var(--gap-4); }
 .gap-5 { gap: var(--gap-5); }
 
-.pad-1 { gap: var(--gap-1); }
-.pad-2 { gap: var(--gap-2); }
-.pad-3 { gap: var(--gap-3); }
-.pad-4 { gap: var(--gap-4); }
-.pad-5 { gap: var(--gap-5); }
+.pad-1 { padding: var(--gap-1); }
+.pad-2 { padding: var(--gap-2); }
+.pad-3 { padding: var(--gap-3); }
+.pad-4 { padding: var(--gap-4); }
+.pad-5 { padding: var(--gap-5); }
+
+.mar-top-1 { margin-top: var(--gap-1) ;}
+.mar-top-2 { margin-top: var(--gap-2) ;}
+
+.f-size-1 { font-size: var(--gap-1);}
+.f-size-2 { font-size: var(--gap-2);}
+.f-size-3 { font-size: var(--gap-3);}
+.f-size-4 { font-size: var(--gap-4);}
 
 /*----------------------------------------------*/
 
