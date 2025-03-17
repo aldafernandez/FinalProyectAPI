@@ -15,6 +15,7 @@
       "MORF" 15,
       "SHLN" 50;
 }
+
 .search-sector { 
     display: flex;
     gap: .5rem;
@@ -29,10 +30,14 @@
         outline: none;
     }
 }
+
 .btn-mode{
     border: 1px solid #222222;
     border-radius: 100%;
     padding: .5rem;
+    cursor: pointer;
+
+    &:hover, &:active {  background-color: #e2678c; }
 }
 
 @media (max-width:600px) {

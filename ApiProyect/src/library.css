@@ -1,6 +1,6 @@
 :root{
-    --bg-dark: #4444;
-    --bg-light: #9e9b9b;
+    --bg-dark: rgb(46, 45, 45);
+    --bg-light: #fff;
 
     --color-1: #fff;
     --color-2: rgb(34, 33, 33);
@@ -35,8 +35,17 @@
 
 /*----------------------------------------------*/
 
+.f-sans {
+    font-family: "PT Sans", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+/*----------------------------------------------*/
+
 .bg-gray{ background-color: var(--bg-dark); }
 .bg-white{ background-color: var(--bg-light); }
+
+.color-1 { color: #646060;}
 /*----------------------------------------------*/
 
 .width-fit { width: fit-content;}
@@ -46,6 +55,8 @@
 .flex{ display: flex; }
 .center-center{ justify-content: center; align-items: center; }
 .column{ flex-direction: column; }
+
+.t-align { text-align: center;}
 /*----------------------------------------------*/
 
 .grid-4{ 
@@ -54,10 +65,24 @@
     gap: 1rem;
     padding: 2.5rem;
 }
+
+.grid-2{
+    display: grid;
+    grid-template-columns: 1fr 2fr ;
+    padding: .5rem;
+}
 /*----------------------------------------------*/
 
+.card{
+    border: 1px solid gray;
+    border-radius: 10px;
+    padding: .5rem;
+    overflow: hidden;
+}
+
+/*----------------------------------------------*/
 .btn{
-    border: 1px solid #444;
+    border: 1px solid #8a8888;
     border-radius: 8px;
     padding: .25rem;
     cursor: pointer;
@@ -69,3 +94,8 @@
     &:hover{ background-color: #e2678c;}
 }
 /*----------------------------------------------*/
+.img-movie { 
+    width: 100%;
+    height: 350px;
+    border-radius: 8px;
+}

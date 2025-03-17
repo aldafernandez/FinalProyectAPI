@@ -26,7 +26,7 @@ export function Searcher({ setMovie }) {
 
 
   return (
-    <header className="searcher">
+    <header className="searcher fixed">
       <h2 className="font-honk f-size-4">Moblix</h2>
       <form className="search-sector" onSubmit={handleSearch}>
         <input
@@ -36,7 +36,7 @@ export function Searcher({ setMovie }) {
           value={search}
           onChange={(e) => setSearch(e.target.value)}
         />
-        <button type="submit">Buscar</button>
+        <button className="btn" type="submit">Buscar</button>
         <button className="btn-mode" onClick={toggleTheme}>
           {darkMode ? <FaSun/> : <FaMoon/> }
         </button>

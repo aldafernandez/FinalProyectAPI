@@ -14,17 +14,17 @@ export function CardMovie({ movie }) {
   }, [movie]);
 
   return (
-    <div>
-      {movies.length > 0 ? (
+    <div className="grid-4">
+      {movies.length > 0 && (
         movies.map((m) => (
-          <div key={m.imdbID}>
-            <img src={m.Poster} alt={m.Title} />
-            <h3>{m.Title}</h3>
-            <Link to={`/movie/${m.imdbID}`}>Ver detalles</Link>
+          <div className="card " key={m.imdbID}>
+            <img className="img-movie" src={m.Poster} alt={m.Title} />
+            <div className="flex column center-center gap-1">
+              <h3 className="">{m.Title}</h3>
+              <Link className="btn color-1" to={`/movie/${m.imdbID}`}>+ Info</Link>
+            </div>
           </div>
         ))
-      ) : (
-        <p>No se encontraron resultados</p>
       )}
     </div>
   );
